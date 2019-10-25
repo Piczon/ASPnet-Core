@@ -1,0 +1,9 @@
+﻿@model IEnumerable<Manufacturer>
+
+@foreach (var p in Model)
+{
+    <div class="box" style="border: 0.2px solid #ff6a00; padding:10px; ">
+        <h3>@p.ManufacturerName</h3>
+        <h6>Kraj: @p.ManufacturerCountry</h6>
+    </div>
+}

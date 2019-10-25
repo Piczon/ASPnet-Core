@@ -84,6 +84,20 @@ namespace SportShop.Models
                 );
                 context.SaveChanges();
             }
+
+
+
+            if (!context.Manufacturers.Any())
+            {
+                context.Manufacturers.AddRange(
+                    new Manufacturer
+                    {
+                        ManufacturerName = "Zbych",
+                        ManufacturerCountry = "Polska"
+                    }
+                );
+                context.SaveChanges();
+            }
         }
     }
 }
