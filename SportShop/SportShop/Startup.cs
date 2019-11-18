@@ -46,7 +46,7 @@ namespace SportShop
                     defaults: new
                     {
                         controller = "Product",
-                        action = "List",
+                        action = "ListAll",
                         productPage = 1
                     }
                 );
