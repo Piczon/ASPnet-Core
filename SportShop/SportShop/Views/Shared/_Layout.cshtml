@@ -7,6 +7,9 @@
 </head>
 <body>
     <div>
+        @await Component.InvokeAsync("NavigationMenu")
+    </div>
+    <div>
         @RenderBody()
     </div>
 </body>
