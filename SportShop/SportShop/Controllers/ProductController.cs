@@ -15,9 +15,8 @@ namespace SportShop.Controllers
         {
             this.repository = repository;
         }
-        public ViewResult List() => View(repository.Products);
+        public ViewResult List(string category) => View(repository.Products.Where(p => p.Category == null || p.Category == category));
 
         public ViewResult ListAll() => View("List", repository.Products);
-
     }
 }
