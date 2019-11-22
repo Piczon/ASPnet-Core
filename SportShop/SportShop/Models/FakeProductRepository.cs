@@ -13,5 +13,15 @@ namespace SportShop.Models
             new Product { Name = "Deska Surfingowa", Price = 179 },
             new Product { Name = "Buty", Price = 100 },
         }.AsQueryable<Product>();
+
+        public Product DeleteProduct(int productID)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SaveProduct(Product product)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

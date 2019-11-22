@@ -50,9 +50,10 @@ namespace SportShop
                         productPage = 1
                     }
                 );
+
                 routes.MapRoute(
                     name: null,
-                    template: "{category}",
+                    template: "Product/{category}",
                     defaults: new
                     {
                         controller = "Product",
@@ -60,7 +61,19 @@ namespace SportShop
                         productPage = 1
                     }
                 );
-                routes.MapRoute(name: null, template: "{controller}/{action}/{id}");
+
+                routes.MapRoute(
+                    name: null,
+                    template: "Admin/{action}",
+                    defaults: new
+                    {
+                        controller = "Admin",
+                        action = "Index"
+                        
+                    }
+                );
+
+                routes.MapRoute(name: null, template: "{controller}/{action}/{id?}");
             });
 
 
