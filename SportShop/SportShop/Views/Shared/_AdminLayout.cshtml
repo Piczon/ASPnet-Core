@@ -3,9 +3,6 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
-    <script src="lib/jquery/dist/jquery.min.js"></script>
-    <script src="lib/jquery-validation/dist/jquery.validate.min.js"></script>
-    <script src="lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
 
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
@@ -19,13 +16,18 @@
     </environment>
 </head>
 
-<body class="m-1 p-1">
+<body class="m-1 p-1" style="background-color: #d3d3d3">
     <div class="d-flex justify-content-center" style="background-color: #4c8cff;">
         @await Component.InvokeAsync("NavigationMenu")
     </div>
 
     <div class="">
         <h4>@ViewBag.Title</h4>
+    </div>
+
+    <div class="col-2">
+        <a class="btn btn-sm btn-primary"
+           asp-action="Logout" asp-controller="Account">Wyloguj</a>
     </div>
 
     @if (TempData["message"] != null)

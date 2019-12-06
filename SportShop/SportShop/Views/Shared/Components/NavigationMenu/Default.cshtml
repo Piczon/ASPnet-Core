@@ -14,7 +14,8 @@
     <a class="btn btn-secondary p-3 @(category == ViewBag.SelectedCategory ? "btn-dark": "btn-secondary")" style="border-radius: 0"
         asp-action="List"
         asp-controller="Product"
-        asp-route-category="@category">
+        asp-route-category="@category"
+        asp-route-id="">
         @category
     </a>
 }

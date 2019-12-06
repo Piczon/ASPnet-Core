@@ -10,6 +10,7 @@ using Microsoft.Extensions.Logging;
 
 namespace SportShop
 {
+#pragma warning disable CS1591
     public class Program
     {
         public static void Main(string[] args)
@@ -22,4 +23,5 @@ namespace SportShop
                 .UseStartup<Startup>()
             .UseDefaultServiceProvider(options => options.ValidateScopes = false);
     }
+#pragma warning restore CS1591
 }
