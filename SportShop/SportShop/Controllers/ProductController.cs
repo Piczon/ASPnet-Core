@@ -18,5 +18,10 @@ namespace SportShop.Controllers
         public ViewResult List(string category) => View(repository.Products.Where(p => p.Category == null || p.Category == category));
 
         public ViewResult ListAll() => View("List", repository.Products);
+
+        public ViewResult GetById(int id) => View(repository.Products.Single(p => p.ProductID == id));
+
+        public ViewResult Delete(int id) => View(repository.Products.Single(p => p.ProductID == id));
+
     }
 }
