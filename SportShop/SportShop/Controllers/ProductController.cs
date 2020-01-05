@@ -21,6 +21,7 @@ namespace SportShop.Controllers
 
         public ViewResult GetById(int id) => View(repository.Products.Single(p => p.ProductID == id));
 
+
         public ViewResult Delete(int id) => View(repository.Products.Single(p => p.ProductID == id));
 
     }
